@@ -1,0 +1,150 @@
+body{
+	margin: 0px 0px 0px 0px;
+	background-color:#326e47;
+}
+.kwadrat{
+	float:left;
+	/*border: 2px solid red;*/
+	width:200px;
+	height:200px;
+	margin:10px;
+}
+aside#lewa{
+	/*border:2px solid green;*/
+	width:360px;
+	height:965px;
+	float:left;
+}
+aside#prawa{
+	/*border:2px solid green;*/
+	width:331px;
+	height:965px;
+	float:left;
+}
+header{
+	float:left;
+	width:1200px;
+	border: 2px solid blue;
+	height:964px;
+	background-color:#379457;
+
+}
+section{
+	/*border: 2px solid red;*/
+	float:left;
+	width:358px;
+	height:200px;
+	margin-top:246px;
+}
+nav{
+	margin-left:auto;
+	margin-right:auto;
+	border:2px solid black;
+	width:896px;
+}
+
+#logo{
+	width:1196px;
+	border:2px solid pink;
+	height:230px;
+}
+#slider{
+	width:1196px;
+	border:2px solid grey;
+	height:200px;
+}
+#jokes{
+	width:1196px;
+	border:2px solid yellow;
+	height:120px;
+}
+
+#kulinaria{
+	width:1200px;
+	height:171px;
+	border: 2px solid brown;
+	float:left;	
+}
+
+#daniel{
+	width:331px;
+	height:500px;
+	/*border:2px solid purple;*/
+	margin-top:220px;
+}
+
+footer{
+	width:1904px;
+	height:28px;
+	/*border:2px solid orange;*/
+	text-align:center;
+	background-color:#102b1a;
+}
+
+#sidebarL{
+	margin-top:300px;
+	/*border:2px solid orange;*/
+}
+
+ul#historia{
+	list-style-type:none;
+	background-color:#ababab;
+	width:50px;
+	height:200px;
+	margin-top:100px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	
+	position:relative;
+	left:-44px;
+	
+}
+
+ul#historia:hover{
+	list-style-type:none;
+	background-color:#ababab;
+	width:50px;
+	height:200px;
+	margin-top:100px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	
+	position:relative;
+	left:0px;
+	
+	transition: 0.3s ease-in-out;
+}
+
+li.hist:hover{
+	transform:scale(1.2);
+	transition:transform 0.3s ease;	
+}
+
+li.hist{
+	padding-top:12px;
+	height:30px;
+	width:42px;
+	margin-top:28px;
+	margin-left:-40px;
+}
+
+ul.jezyki{
+	list-style-type:none;	
+}
+
+li.jezyk:hover{
+	transform:scale(1.2);
+	transition-property:transform;
+	transition-duration:0.5s;
+}
+
+li.jezyk{
+	width:55px;
+	height:36px;
+	margin-top:5px;	
+}
+
+a{
+	text-decoration:none;
+	color:black;
+}
