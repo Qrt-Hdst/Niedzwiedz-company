@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<class>
+    <Danie>
+        <Nazwa_dania>Cebularz</Nazwa_dania>
+        <Zdjecie>kulinaria\kulinaria-zdjecia\1-cebularz.PNG</Zdjecie>
+        <Skladniki>
+		-C​iasto-
+		50 g świeżych drożdży lub 15 g suchych drożdży instant
+		1 łyżka cukru
+		500 g mąki
+		1 szklanka ciepłego mleka
+		1 jajko
+		2 łyżeczki soli
+		60 g masła
+		-Cebula z makiem-
+		2 duże cebule
+		3 łyżki maku
+		1 łyżeczka soli
+		2 łyżki oleju
+		</Skladniki>
+        <Przygotowania>
+		-Cebula z Makiem-
+		Cebulę najlepiej jest przygotować na dzień lub dwa dni przed pieczeniem cebularzy. Cebulę należy pokroić w grubą kostkę, obgotować przez 1 - 2 minuty we wrzątku i odcedzić. Gorącą wymieszać z makiem, solą i olejem. Szybko przełożyć do słoika, szczelnie zamknąć, a po ostygnięciu wstawić do lodówki.
+		-Ciasto-
+		Świeże drożdże wymieszać z cukrem, 2 łyżkami mąki i częścią ciepłego mleka. Pozostawić do wyrośnięcia. Drożdże instant wymieszać od razu z mąką.
+		Rozpuścić masło z resztą mleka. Wyrośnięty rozczyn wraz z ciepłym mlekiem i masłem dodać do mąki z solą. Jajko roztrzepać widelcem i dodać do pozostałych składników, zostawiając 1 łyżkę na posmarowanie brzegów cebularzy.
+		Wyrobić ciasto (10 - 15 minut), tak aby odstawało od ręki, w razie potrzeby dodać trochę mąki. Pozostawić do wyrośnięcia (60 - 90 minut).
+		Ciasto wyłożyć na stolnicę posypaną mąką i powygniatać przez ok. 1 - 2 minuty, podzielić na 14 części. Każdą część rozwałkować na placek, ułożyć na cienko wysmarowanej olejem blasze do pieczenia. Brzegi placków posmarować odłożonym jajkiem. Rozłożyć cebulę z makiem. Zostawić do wyrośnięcia (30 - 60 minut).
+		Piec przez ok. 20 minut w 180 stopniach C na lekko złoty kolor.
+		</Przygotowania>
+		<Zrodlo>Źródło:https://www.kwestiasmaku.com/kuchnia_polska/drozdzowe_wypieki/cebularze/przepis.html</Zrodlo>
+    </Danie>
+    <Danie>
+        <Nazwa_dania>Bajgiel</Nazwa_dania>
+        <Zdjecie>ulinaria\kulinaria-zdjecia\2-bajgle.PNG</Zdjecie>
+        <Skladniki>
+		-Bajgiel-
+		500 g mąki pszennej
+		25 g świeżych drożdży
+		300 ml wody
+		1 łyżka miękkiego masła
+		1 łyżka cukru + 1 łyżka cukru do gotowania bajgli
+		1 płaska łyżeczka soli
+		1 jajko roztrzepane z 1 łyżką wody do posmarowania
+		na posypkę: gruboziarnista sól, mak, sezam, kminek, czarnuszka itp.
+		</Skladniki>
+        <Przygotowania>
+		Do miski rozkrusz drożdże, zasyp cukrem i zalej 1/4 szklanki letniej wody (nie gorącą – zbyt wysoka temperatura zabije drożdże). Wymieszaj do rozpuszczenia się drożdży.
+
+		Dodaj 2 łyżki mąki pszennej i wymieszaj, by nie było grudek. Przykryj ściereczką i odstaw na około 15 minut w ciepłe miejsce do wyrośnięcia.
+
+		W misce umieść pozostałe składniki – resztę mąki pszennej i wody, sól i roztopione masło. Wyrób miękkie i elastyczne ciasto.
+
+		Ciasto pozostaw w oprószonej mąką misce. Przykryj ściereczką i odstaw w ciepłe miejsce na ok. 1 godz., aż podwoi swoją objętość.
+
+		Wyrośnięte ciasto podziel na równe części i uformuj okrągłe bułeczki (ok. 10 sztuk), następnie palcem zrób w środku dziurkę, odsuwając ciasto na boki.
+
+		Bajgle ułóż na desce oprószonej mąką. Ponownie odstaw przykryte ściereczką do wyrośnięcia na ok. 20 minut.
+
+		W większym garnku zagotuj 2 litry wody. W wodzie rozpuść 1 łyżkę cukru. Do gotującej się wody włóż bajgle – po 3-4 sztuki. Gotuj minutę, następnie przewróć bajgle na drugą stronę i gotuj kolejną minutę.
+
+		Delikatnie wyjmij bajgle z wody przy pomocy łyżki cedzakowej i ułóż np. na papierze do pieczenia, do osuszenia.
+
+		Bajgle przełóż na blachę wyłożoną papierem do pieczenia i posmaruj jajkiem roztrzepanym z wodą oraz posyp ziarnami.
+
+		Piekarnik nagrzej do 200 stopni C i wstaw bajgle. Piecz przez ok. 15 minut, aż nabiorą złotego koloru.
+
+		Po upieczeniu pozostaw do przestudzenia na kratce kuchennej
+		</Przygotowania>
+		<Zrodlo>Źródło:https://www.zajadam.pl/sniadanie/domowe-bajgle</Zrodlo>
+    </Danie>
+</class>
