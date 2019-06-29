@@ -20,7 +20,14 @@ git add file.txt                <-- to dziadostwo daje informacje że ma sie int
 
 u nas raczej z lenistwa i ze bedziemy dodawać mase png robimy
 I)git add -A <---------to kaze wszystkie pliki w naszym repozytorium sie interesować
-II) Kolejny krok - robimy kommita
+II) Kolejny krok - robimy kommita - a wiec dodajemy zmiane do naszej galezi
 
+git commit -m "jam jest git twoj"
+---------
+4. Publikujemy branch 
+git push -u origin chelm-ludowy
+
+nasz branch jest juz dostepny w repo na necie
+----------
 
  
