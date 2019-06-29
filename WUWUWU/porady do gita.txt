@@ -29,5 +29,18 @@ git push -u origin chelm-ludowy
 
 nasz branch jest juz dostepny w repo na necie
 ----------
+5. Chcemy teraz zmiany dodane na naszej galezi przeniesc do galezi glownej master
 
- 
+I)git checkout master <--- przenosimy sie do master, jesli bedzie sie prol ze chcemey sie przeniesc bez zapisanaia zmian musimy zrobic commita na galezi 'chelm ludowy' przed wydaniem tej komendy
+
+II)git merge chelm-ludowy
+------------------
+6.Usuniecie galezi 
+
+git branch -d chelm-ludowy bo juz nam nie potrzebny
+
+eeqrq
+
+
+dsaasd
+
