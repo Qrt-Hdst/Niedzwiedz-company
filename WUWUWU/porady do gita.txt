@@ -1,0 +1,26 @@
+
+
+
+trzymamy się konwecji - nowy dzień - tworzenie nowej galezi  żeby ne bylo balaganu - nazwa galezi moze byc smieszkowa ale jak nie to po prostu dzien albo ccel do zrobienia
+
+staramy sie uzywac konsoli
+-------------------
+1.naciskamy current repository --> nazwa naszego projektu "Niedzwiedz-company" prawy przycisk --> open in command prompt
+-----------------
+2.wpisujemy : git branch <nazwa galezi> 
+-example-
+git branch chelm-ludowy
+w efekcie powstaje nowa galez zasysajaca dane z master galezi
+-----------------
+3.Kiedy nawsadzasz/nazmieniasz pliki i chcesz je dodać do zrob
+
+
+stworzylismy file.txt i dalismy jakas zawartosc
+git add file.txt                <-- to dziadostwo daje informacje że ma sie interesować zmianami file.txt
+
+u nas raczej z lenistwa i ze bedziemy dodawać mase png robimy
+I)git add -A <---------to kaze wszystkie pliki w naszym repozytorium sie interesować
+II) Kolejny krok - robimy kommita
+
+
+ 
