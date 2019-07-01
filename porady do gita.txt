@@ -11,9 +11,12 @@ staramy sie uzywac konsoli
 -example-
 git branch chelm-ludowy
 w efekcie powstaje nowa galez zasysajaca dane z master galezi
+--------------
+3.przenosimy się do nowopowstałego brancha
+
+git checkout chelm-ludowy
 -----------------
 3.Kiedy nawsadzasz/nazmieniasz pliki i chcesz je dodać do zrob
-
 
 stworzylismy file.txt i dalismy jakas zawartosc
 git add file.txt                <-- to dziadostwo daje informacje że ma sie interesować zmianami file.txt
@@ -35,12 +38,12 @@ I)git checkout master <--- przenosimy sie do master, jesli bedzie sie prol ze ch
 
 II)git merge chelm-ludowy
 ------------------
-6.Usuniecie galezi 
+6. opublikowanie zmergowania na serwerze globalnym
+
+git push -u origin master
+
+
+--------------
+7.Usuniecie galezi 
 
 git branch -d chelm-ludowy bo juz nam nie potrzebny
-
-eeqrq
-
-
-dsaasd
-
