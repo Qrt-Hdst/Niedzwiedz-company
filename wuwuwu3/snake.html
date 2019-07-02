@@ -101,9 +101,50 @@
 		
 		//Get the canvas element
 		const gameCanvas = document.getElementById("kastiuszkoGameCanvas")
+		//Return  two dimensional drawing context
+		const ctx = gameCanvas.getContext("2d")
+		
+		//Start Game 
+		main();
+		//Create the first food location
+		createFood();
+		//Call changeDirection whenever a key is pressed
+		document.addEventListener("keydown",changeDirection)
+		
+		
+		/**
+		* Main function of the game 
+		* called repeatedly to advance the game
+		*/
+		function main() {
+			//if the game ended return early to stop game 
+			if(didGameEnd()) return;
+			
+			setTimeout(function onTick {
+				changingDirection = false;
+				clearCanvas();
+				drawFood();
+				advanceSnake();
+				drawSnake();
+				
+				//Call game again
+				main();
+			 ), GAME_SPEED)
+		  }
+			
+		}
+		
+		/**
+		* Change the background colour of the canvas to
+		CANVAS_BACKGROUND_COLOUR and 
+		* draw a border around it
+		*
+		**/
+		function clear
 		
 		
 		
+	</script>
 		
 		
 		
