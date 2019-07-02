@@ -38,7 +38,13 @@
 			<h1 id="granaglowek">KOŚCIUSZKO GAME</h1>
 			
 			<div id="gierka">
-				GIERKA
+				<canvas id="kastiuszkoGameCanvas" width="740" height="740" style="border:1px solid #d3d3d3;">
+				
+				
+				
+				
+				
+				</canvas>
 			</div>
 		</div> <!--central-->
 		
@@ -62,5 +68,45 @@
 		futer
 		</footer>
 	</main>	
+	
+	<script>
+		const GAME_SPEED = 100;
+		const CANVAS_BORDER_COLOUR = 'black'
+		const CANVAS_BACKGROUND_COLOUR = "white"
+		const SNAKE_COLOUR = 'lightgreen';
+		const SNAKE_BORDER_COLOUR = 'darkgreen';
+		const FOOD_COLOUR = 'red'
+		const FOOD_BORDER_COLOUR = 'darkred'
+		
+		let snake = [
+			{ x: 150, y: 150 },
+			{ x: 140, y: 150 },
+			{ x: 130, y: 150 },
+			{ x: 120, y: 150 },
+			{ x: 110, y: 150 }
+		]
+
+		//the user's score 
+		let score = 0;
+		//When set to true the snake is changing direction
+		let changingDirection = false;
+		//Food x-cordinate
+		let foodX;
+		//Food y-cordinate
+		let foodY;
+		//Horizontal velocity
+		let dx = 10;
+		//vertical velocity 
+		let dy = 0;
+		
+		//Get the canvas element
+		const gameCanvas = document.getElementById("kastiuszkoGameCanvas")
+		
+		
+		
+		
+		
+		
+		
 </body>
 </html>
