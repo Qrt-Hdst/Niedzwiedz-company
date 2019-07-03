@@ -488,18 +488,21 @@ a{
 
 /*==============GIERKI===========================================================*/
 
-#gameCanvas {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  }
+#gierka{
+	width:740px;
+	height:740px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+}
 
-  #score {
-	text-align: center;
-	font-size: 140px;
-	font-family: 'Antic Slab', serif;
-  }
+#granaglowek{
+	text-align:center;
+	text-size:60px;
+}
+
+
+
 
 
 /*==============GIERKI===========================================================*/
