@@ -1,6 +1,6 @@
     const GAME_SPEED = 100;
     const CANVAS_BORDER_COLOUR = 'black';
-    const CANVAS_BACKGROUND_COLOUR = "white";
+    const CANVAS_BACKGROUND_COLOUR = "lightblue";
     const SNAKE_COLOUR = 'lightgreen';
     const SNAKE_BORDER_COLOUR = 'darkgreen';
     const FOOD_COLOUR = 'red';
@@ -66,12 +66,13 @@ function clearmove() {
     myGamePiece.speedY = 0; 
 }
 
+
     let snake = [
-      {x: 150, y: 150},
-      {x: 140, y: 150},
-      {x: 130, y: 150},
-      {x: 120, y: 150},
-      {x: 110, y: 150}
+      {x: 10, y: 10},
+      {x: 10, y: 20},
+      {x: 10, y: 30},
+      {x: 10, y: 40},
+      {x: 10, y: 50}
     ]
 
     // The user's score
@@ -89,9 +90,23 @@ function clearmove() {
 
     // Get the canvas element
     const gameCanvas = document.getElementById("gameCanvas");
+    //wysokosc canvasa uzyskam przez gameCanvas.height, gameCanvas.width
     // Return a two dimensional drawing context
     const ctx = gameCanvas.getContext("2d");
 
+    function makeImages(){
+      chelmball = new Image();
+      chelmball.src = 'img_snake/chelmkosckosa.png';
+      kosciuszkoball = new Image();
+      kosciuszkoball.src = 'img_snake/kosc2.png';
+      russianBall = new Image();
+      russianBall.src = 'img_snake/rus1.png';
+      //chelmball.onload = function(){
+        //ctx.drawImage(chelmball,0,0,50,50);
+      //}
+
+    }
+    makeImages();
     // Start game
     main();
     // Create the first food location
@@ -105,9 +120,11 @@ function clearmove() {
      * called repeatedly to advance the game
      */
     function main() {
+      console.log("wit")
       // If the game ended return early to stop game
       if (didGameEnd()) return;
 
+      console.log("witaj");
       setTimeout(function onTick() {
         changingDirection = false;
         clearCanvas();
@@ -134,16 +151,23 @@ function clearmove() {
       ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
       // Draw a "border" around the entire canvas
       ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+
     }
 
     /**
      * Draw the food on the canvas
      */
     function drawFood() {
+
       ctx.fillStyle = FOOD_COLOUR;
       ctx.strokestyle = FOOD_BORDER_COLOUR;
-      ctx.fillRect(foodX, foodY, 10, 10);
-      ctx.strokeRect(foodX, foodY, 10, 10);
+      //ctx.fillRect(foodX, foodY, 10, 10);
+      //ctx.strokeRect(foodX, foodY, 10, 10);
+
+      //chelmball.onload = function(){
+        ctx.drawImage(chelmball,foodX,foodY,10,10);
+      //}
     }
 
     /**
@@ -236,10 +260,10 @@ function clearmove() {
 
       // Draw a "filled" rectangle to represent the snake part at the coordinates
       // the part is located
-      ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
-
+      //ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
+      ctx.drawImage(kosciuszkoball,snakePart.x,snakePart.y,10,10);
       // Draw a border around the snake part
-      ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+      //ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
     }
 
     /**
