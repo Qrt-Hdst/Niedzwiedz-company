@@ -487,34 +487,20 @@ a{
 }
 
 /*==============GIERKI===========================================================*/
-#gierka {
-	/*position: absolute;*/
-	top: 80%;
-	left: 50%;
+
+#gierka{
+	width:740px;
+	height:740px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+}
+
+#granaglowek{
 	text-align:center;
-	}
-	
-  #score {
-		text-align: center; /*środkuje zarówno tekst jak i same elementy wewnatrz*/
-		font-size: 140px;
-		font-family: 'Antic Slab', serif;
-		}
+	text-size:60px;
+}
 
-#gameCanvas {
-	/*position: absolute;
-	top: 50%;
-	left: 50%;
-		align:center;
-		border-radius:10px;
-	transform: translate(-50%, -50%);
-		margin-left:auto;
-	margin-right:auto;*/
-
-	background-color:green;
-	position:relative;
-	width: 100%;
-	height:100%;
-  }
 
 
 

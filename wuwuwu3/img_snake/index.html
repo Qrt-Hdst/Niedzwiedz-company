@@ -8,8 +8,7 @@
 	
 	<meta name="description" content="Opis w Google" />
 	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
-  <link rel="stylesheet" href="style.css" type="text/css">
-
+	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
 <body>
@@ -33,17 +32,46 @@
 			<header>
 				<div id="logo">
 					<a href="index.html"> <img src="img/logo.png" alt="LOGO" /></a>
-				</div>		
+				</div>
+				<div id="sliderr">
+					<slider>
+						<slide><p>Slide 1</p></slide>
+						<slide><p>Slide 2</p></slide>
+						<slide><p>Slide 3</p></slide>
+						<slide><p>Slide 4</p></slide>
+					</slider>
+				</div>
+				
+				<nav>
+					<div id="menu">
+						<ul id="listamenu">
+							<a href="snake.html"><li class="menu1"> GRY </li></a>
+							<a href="#"><li class="menu2"> KOMIXY </li></a>
+							<a href="#"><li class="menu3"> MEMY </li></a>
+							<a href="#"><li class="menu4"> MATERIAŁY </li></a>
+						</ul>
+					</div>
+				</nav>
+				
 			</header>
 			
-			<h1 id="granaglowek">KOŚCIUSZKO GAME</h1>
-			
-			<div id="gierka">
-				<div id="score">0</div>
-				<canvas id="gameCanvas"  >
-							
-				</canvas>
-			</div>
+			<article>
+				<div id="jokescontent">
+					<div id="joke">
+						JOKES
+					</div>
+				</div>
+				<div id="cytatycontent">
+					<div id="cytaty">
+						CYTATY
+					</div>
+				</div>
+				<div id="kulinariacontent">
+					<div id="kulinaria">
+						KULINARIA
+					</div>
+				</div>
+			</article>
 		</div> <!--central-->
 		
 		<aside>
@@ -60,14 +88,14 @@
 				<div id="L2">
 				</div>-->
 			</div>
+			<div id="daniel">
+				<a href="#"><img src="img/daniel.png" alt="daniel"/></a>
+			</div>
 		</aside>		
 		
 		<footer>
 		futer
 		</footer>
 	</main>	
-
-  <script type="text/javascript" src="kosciuszkoGame.js"></script>
-		
 </body>
 </html>

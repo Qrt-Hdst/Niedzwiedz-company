@@ -1,0 +1,9 @@
+.owoce { color: pink; } 
+   |			|
+selektor	blok deklaracji - nazwa wlasciwosci, wartosc wlasciwosci
+
+selektor okresla do ktorego elementu/elementow sie odnosi
+
+ksiazka strona 61/644
+
+znak dolara w JS
