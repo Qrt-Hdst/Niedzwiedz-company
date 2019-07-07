@@ -486,6 +486,18 @@ a{
 	color:black;
 }
 
+
+/*==============ListaGier========================================================*/
+
+#listaGier {
+
+}
+
+#kosciuszkoGame {
+	width: 20%;
+	height:20%;
+}
+
 /*==============GIERKI===========================================================*/
 #gierka {
 	/*position: absolute;*/
@@ -494,11 +506,11 @@ a{
 	text-align:center;
 	}
 	
-  #score {
-		text-align: center; /*środkuje zarówno tekst jak i same elementy wewnatrz*/
-		font-size: 140px;
-		font-family: 'Antic Slab', serif;
-		}
+#score {
+	text-align: center; /*środkuje zarówno tekst jak i same elementy wewnatrz*/
+	font-size: 140px;
+	font-family: 'Antic Slab', serif;
+	}
 
 #gameCanvas {
 	/*position: absolute;

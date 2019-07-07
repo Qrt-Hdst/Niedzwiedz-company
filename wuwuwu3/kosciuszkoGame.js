@@ -1,44 +1,45 @@
    
-   
-    const GAME_SPEED = 80;
-    const CANVAS_BORDER_COLOUR = 'black';
-    const CANVAS_BACKGROUND_COLOUR = "lightblue";
-    const SNAKE_COLOUR = 'lightgreen';
-    const SNAKE_BORDER_COLOUR = 'darkgreen';
-    const FOOD_COLOUR = 'red';
-    const FOOD_BORDER_COLOUR = 'darkred';
+   //STALE
+    
+  const GAME_SPEED = 80;
+  const CANVAS_BORDER_COLOUR = 'black';
+  const CANVAS_BACKGROUND_COLOUR = "lightblue";
+  const SNAKE_COLOUR = 'lightgreen';
+  const SNAKE_BORDER_COLOUR = 'darkgreen';
+  const FOOD_COLOUR = 'red';
+  const FOOD_BORDER_COLOUR = 'darkred';
 
 
  
 
-  function component(width, height, color, x, y, type) {
-    this.type = type;
-    if (type == "image") {
-        this.image = new Image();
-        this.image.src = color;
-    }
-    this.width = width;
-    this.height = height;
-    this.speedX = 0;
-    this.speedY = 0;    
-    this.x = x;
-    this.y = y;    
-    this.update = function() {
-        ctx = myGameArea.context;
-        if (type == "image") {
-            ctx.drawImage(this.image, 
-                this.x, 
-                this.y,
-                this.width, this.height);
-        } else {
-            ctx.fillStyle = color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-        }
-    }
-    this.newPos = function() {
-        this.x += this.speedX;
-        this.y += this.speedY;        
-    }
+function component(width, height, color, x, y, type) {
+  this.type = type;
+  if (type == "image") {
+      this.image = new Image();
+      this.image.src = color;
+  }
+  this.width = width;
+  this.height = height;
+  this.speedX = 0;
+  this.speedY = 0;    
+  this.x = x;
+  this.y = y;    
+  this.update = function() {
+      ctx = myGameArea.context;
+      if (type == "image") {
+          ctx.drawImage(this.image, 
+              this.x, 
+              this.y,
+              this.width, this.height);
+      } else {
+          ctx.fillStyle = color;
+          ctx.fillRect(this.x, this.y, this.width, this.height);
+      }
+  }
+  this.newPos = function() {
+      this.x += this.speedX;
+      this.y += this.speedY;        
+  }
 }
 
 function updateGameArea() {
@@ -118,17 +119,15 @@ function clearmove() {
      * called repeatedly to advance the game
      */
     function main() {
-      console.log("wit")
       // If the game ended return early to stop game
       if (didGameEnd()) return;
 
-      console.log("witaj");
       setTimeout(function onTick() {
         changingDirection = false;
         clearCanvas();
         drawChelmianRecrut();
         advanceKosciuszkoTeam();
-        drawSnake();
+        drawKosciuszkoTeam();
 
         // Call game again
         main();
@@ -149,8 +148,6 @@ function clearmove() {
       ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
       // Draw a "border" around the entire canvas
       ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
-
-
     }
 
     /**
@@ -179,9 +176,9 @@ function clearmove() {
       // Add the new head to the beginning of snake body
       kosciuszkoTeam.unshift(head);
 
-      const didEatFood = kosciuszkoTeam[0].x === chelmianRecrutX 
+      const didRecrutChelmian = kosciuszkoTeam[0].x === chelmianRecrutX 
                   && kosciuszkoTeam[0].y === chelmianRecrutY;
-      if (didEatFood) {
+      if (didRecrutChelmian) {
         // Increase score
         score += 10;
         // Display score on screen
@@ -242,7 +239,7 @@ function clearmove() {
     /**
      * Draws the snake on the canvas
      */
-    function drawSnake() {
+    function drawKosciuszkoTeam() {
       // loop through the snake parts drawing each part on the canvas
       kosciuszkoTeam.forEach(drawSnakePart)
     }
