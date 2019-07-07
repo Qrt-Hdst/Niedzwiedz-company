@@ -69,18 +69,18 @@ function clearmove() {
 }
 
 
-    let snake = [
+    let kosciuszkoTeam = [
       {x: 10, y: 10}
     ]
 
     // The user's score
     let score = 0;
-    // When set to true the snake is changing direction
+    // When set to true the kosciuszkoTeam is changing direction
     let changingDirection = false;
-    // Food x-coordinate
-    let foodX;
-    // Food y-coordinate
-    let foodY;
+    // chelmianRecrut x-coordinate
+    let chelmianRecrutX;
+    // chelmianRecrut y-coordinate
+    let chelmianRecrutY;
     // Horizontal velocity
     let dx = 10;
     // Vertical velocity
@@ -107,8 +107,8 @@ function clearmove() {
     makeImages();
     // Start game
     main();
-    // Create the first food location
-    createFood();
+    // Create the first chelmianRecrut location
+    createChelmianRecrut();
     // Call changeDirection whenever a key is pressed
     document.addEventListener("keydown", changeDirection);
 
@@ -126,8 +126,8 @@ function clearmove() {
       setTimeout(function onTick() {
         changingDirection = false;
         clearCanvas();
-        drawFood();
-        advanceSnake();
+        drawChelmianRecrut();
+        advanceKosciuszkoTeam();
         drawSnake();
 
         // Call game again
@@ -156,7 +156,7 @@ function clearmove() {
     /**
      * Draw the food on the canvas
      */
-    function drawFood() {
+    function drawChelmianRecrut() {
 
       ctx.fillStyle = FOOD_COLOUR;
       ctx.strokestyle = FOOD_BORDER_COLOUR;
@@ -164,49 +164,51 @@ function clearmove() {
       //ctx.strokeRect(foodX, foodY, 10, 10);
 
       //chelmball.onload = function(){
-        ctx.drawImage(chelmball,foodX,foodY,10,10);
+        ctx.drawImage(chelmball,chelmianRecrutX,chelmianRecrutY,10,10);
       //}
     }
 
     /**
-     * Advances the snake by changing the x-coordinates of its parts
+     * Advances the kosciuszkoTeam by changing the x-coordinates of its parts
      * according to the horizontal velocity and the y-coordinates of its parts
      * according to the vertical veolocity
      */
-    function advanceSnake() {
-      // Create the new Snake's head
-      const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+    function advanceKosciuszkoTeam() {
+      // Create the new kosciuszkoTeam's head
+      const head = {x: kosciuszkoTeam[0].x + dx, y: kosciuszkoTeam[0].y + dy};
       // Add the new head to the beginning of snake body
-      snake.unshift(head);
+      kosciuszkoTeam.unshift(head);
 
-      const didEatFood = snake[0].x === foodX && snake[0].y === foodY;
+      const didEatFood = kosciuszkoTeam[0].x === chelmianRecrutX 
+                  && kosciuszkoTeam[0].y === chelmianRecrutY;
       if (didEatFood) {
         // Increase score
         score += 10;
         // Display score on screen
         document.getElementById('score').innerHTML = score;
 
-        // Generate new food location
-        createFood();
+        // Generate new chelmianRecrut location
+        createChelmianRecrut();
       } else {
-        // Remove the last part of snake body
-        snake.pop();
+        // Remove the last part of kosciuszkoTeam body
+        kosciuszkoTeam.pop();
       }
     }
 
     /**
-     * Returns true if the head of the snake touched another part of the game
+     * Returns true if the head of the kosciuszkoTeam touched another part of the game
      * or any of the walls
      */
     function didGameEnd() {
-      for (let i = 4; i < snake.length; i++) {
-        if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true
+      for (let i = 4; i < kosciuszkoTeam.length; i++) {
+        if (kosciuszkoTeam[i].x === kosciuszkoTeam[0].x 
+          && kosciuszkoTeam[i].y === kosciuszkoTeam[0].y) return true
       }
 
-      const hitLeftWall = snake[0].x < 0;
-      const hitRightWall = snake[0].x > gameCanvas.width - 10;
-      const hitToptWall = snake[0].y < 0;
-      const hitBottomWall = snake[0].y > gameCanvas.height - 10;
+      const hitLeftWall = kosciuszkoTeam[0].x < 0;
+      const hitRightWall = kosciuszkoTeam[0].x > gameCanvas.width - 10;
+      const hitToptWall = kosciuszkoTeam[0].y < 0;
+      const hitBottomWall = kosciuszkoTeam[0].y > gameCanvas.height - 10;
 
       return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
     }
@@ -222,18 +224,18 @@ function clearmove() {
     }
 
     /**
-     * Creates random set of coordinates for the snake food.
+     * Creates random set of coordinates for the kosciuszkoTeam chelmianRecrut.
      */
-    function createFood() {
-      // Generate a random number the food x-coordinate
-      foodX = randomTen(0, gameCanvas.width - 10);
-      // Generate a random number for the food y-coordinate
-      foodY = randomTen(0, gameCanvas.height - 10);
+    function createChelmianRecrut() {
+      // Generate a random number the chelmianRecrut x-coordinate
+      chelmianRecrutX = randomTen(0, gameCanvas.width - 10);
+      // Generate a random number for the chelmianRecrut y-coordinate
+      chelmianRecrutY = randomTen(0, gameCanvas.height - 10);
 
-      // if the new food location is where the snake currently is, generate a new food location
-      snake.forEach(function isFoodOnSnake(part) {
-        const foodIsoNsnake = part.x == foodX && part.y == foodY;
-        if (foodIsoNsnake) createFood();
+      // if the new chelmianRecrut location is where the kosciuszkoTeam currently is, generate a new food location
+      kosciuszkoTeam.forEach(function isFoodOnSnake(part) {
+        const foodIsoNsnake = part.x == chelmianRecrutX && part.y == chelmianRecrutY;
+        if (foodIsoNsnake) createChelmianRecrut();
       });
     }
 
@@ -242,7 +244,7 @@ function clearmove() {
      */
     function drawSnake() {
       // loop through the snake parts drawing each part on the canvas
-      snake.forEach(drawSnakePart)
+      kosciuszkoTeam.forEach(drawSnakePart)
     }
 
     /**
@@ -256,7 +258,7 @@ function clearmove() {
       // Set the border colour of the snake part
       ctx.strokestyle = SNAKE_BORDER_COLOUR;
 
-      // Draw a "filled" rectangle to represent the snake part at the coordinates
+      // Draw a "filled" rectangle to represent the kosciuszkoTeam part at the coordinates
       // the part is located
       //ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
       ctx.drawImage(kosciuszkoball,snakePart.x,snakePart.y,10,10);
@@ -265,9 +267,10 @@ function clearmove() {
     }
 
     /**
-     * Changes the vertical and horizontal velocity of the snake according to the
+     * Changes the vertical and horizontal velocity of the kosciuszkoTeam according to the
      * key that was pressed.
-     * The direction cannot be switched to the opposite direction, to prevent the snake
+     * The direction cannot be switched to the opposite direction, to prevent the 
+     * kosciuszkoTeam
      * from reversing
      * For example if the the direction is 'right' it cannot become 'left'
      * @param { object } event - The keydown event
@@ -278,10 +281,10 @@ function clearmove() {
       const UP_KEY = 38;
       const DOWN_KEY = 40;
       /**
-       * Prevent the snake from reversing
+       * Prevent the kosciuszkoTeam from reversing
        * Example scenario:
-       * Snake is moving to the right. User presses down and immediately left
-       * and the snake immediately changes direction without taking a step down first
+       * kosciuszkoTeam is moving to the right. User presses down and immediately left
+       * and the kosciuszkoTeam immediately changes direction without taking a step down first
        */
       if (changingDirection) return;
       changingDirection = true;
