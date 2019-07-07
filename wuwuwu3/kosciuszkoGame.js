@@ -1,4 +1,6 @@
-    const GAME_SPEED = 100;
+   
+   
+    const GAME_SPEED = 80;
     const CANVAS_BORDER_COLOUR = 'black';
     const CANVAS_BACKGROUND_COLOUR = "lightblue";
     const SNAKE_COLOUR = 'lightgreen';
@@ -68,11 +70,7 @@ function clearmove() {
 
 
     let snake = [
-      {x: 10, y: 10},
-      {x: 10, y: 20},
-      {x: 10, y: 30},
-      {x: 10, y: 40},
-      {x: 10, y: 50}
+      {x: 10, y: 10}
     ]
 
     // The user's score
@@ -96,9 +94,9 @@ function clearmove() {
 
     function makeImages(){
       chelmball = new Image();
-      chelmball.src = 'img_snake/chelmkosckosa.png';
+      chelmball.src = 'img_snake/chelmkosckosa MINI.png';
       kosciuszkoball = new Image();
-      kosciuszkoball.src = 'img_snake/kosc2.png';
+      kosciuszkoball.src = 'img_snake/koscMINI.png';
       russianBall = new Image();
       russianBall.src = 'img_snake/rus1.png';
       //chelmball.onload = function(){
