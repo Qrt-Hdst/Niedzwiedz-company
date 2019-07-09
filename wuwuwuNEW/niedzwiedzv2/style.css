@@ -1,0 +1,368 @@
+body{
+	background-image:url("imgs/BGbody.png");
+	color:white;
+	margin:0px;
+	min-width:1000px;
+}
+
+/*****************************************HEADER*****************************************************/
+header{
+	background-image:url("imgs/BGheader.png");
+	width:100%;
+	height:113px;
+	border-bottom:1px solid black;
+}
+
+#topContainer{
+	width:1900px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding: 0px 0px 0px 0px;
+	height:113px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#jezyki{
+	width:450px;
+	height:113px;
+	float:left;
+	/*background-color:yellow;*/
+}
+
+ul#jezykk{
+	list-style-type:none;
+	margin:0px;
+	margin-top:30px;
+}
+
+li.jezyk{
+	display:inline-block;
+	padding:5px;
+	transition-duration:0.5s;
+	transition-timing-function:easy-in-out;
+}
+
+li.jezyk:hover{
+	transform:scale(1.2);
+	transition-property:transform;
+	transition-duration:0.5s;	
+	transition-timing-function:easy-in-out;
+}
+
+#logo{
+	width:1000px;	
+	float:left;
+}
+#rac{
+	height:113px;
+	/*background-image:url("imgs/logo.png");*/
+	/*background-position:cover;*/
+}
+#logowanie{
+	width:450px;	
+	height:113px;
+	float:left;
+	/*background-color:blue;*/
+}
+
+/*****************************************KONIEC HEADER*****************************************************/
+/*****************************************CONTENT****************************************************/
+
+#contentContainer{
+	width:1000px;
+	/*height:1500px;*/
+	background-color:#b9bdb7;
+	margin:0px auto 0px auto;
+}
+
+#slidermenu{
+	height:570px;
+	width:100%;
+	margin:0px auto 0px auto;
+}
+
+#sidenav a{
+	position:absolute;
+	left:-120px;
+	transition: 0.3s;
+	padding:15px;
+	width:150px;
+	text-decoration:none;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	border-radius:0 5px 5px 0;
+}
+
+span.sideEl{
+	margin-right:30px;
+}
+
+#sidenav a:hover{
+	left:0;
+}
+
+#fbRAC{
+	top:220px;
+	text-align:right;
+	background-color:#3b5998;
+}
+#fbChb{
+	top:280px;
+	text-align:right;
+	background-color:#3b5998;
+}
+#ytube{
+	top:340px;
+	text-align:right;
+	background-color:#d02525;
+}
+
+#history{
+	top:420px;
+	text-align:right;
+	background-color:#e8b431;
+}
+
+
+nav{
+	width:100%;
+	height:250px;
+	margin:40px auto 0px auto;
+	background-color:#d0d4cd;
+}
+
+#menuContainer{
+	width:990px;
+	height:250px;
+	margin-left:30px;
+}
+
+.menu1,.menu2,.menu3,.menu4{
+	width:200px;
+	height:200px;
+	display:inline-block;
+	background-color:green;
+	margin-right:40px;
+	margin-top:20px;
+	border-radius:10px;
+	vertical-align:middle;
+	text-align:center;
+	box-shadow: inset 0 0 10px white;
+	-moz-box-shadow: inset 0 0 10px white;
+	-webkit-box-shadow: inset 0 0 10px white;
+}
+
+.menu1:hover,.menu2:hover,.menu3:hover,.menu4:hover{
+	height:200px;
+	width:200px;
+	border-radius:10px;
+	vertical-align:middle;
+	text-align:center;
+	opacity:0.95;
+	box-shadow: inset 0 0 10px green;
+	-moz-box-shadow: inset 0 0 10px green;
+	-webkit-box-shadow: inset 0 0 10px green;
+}
+.menu1{
+	background-image:url("imgs/gry.png");
+	background-size:cover;
+}
+.menu2{
+	background-image:url("imgs/komixy.png");
+	background-size:cover;
+}
+.menu3{
+	background-image:url("imgs/memy.png");
+	background-size:cover;
+}
+.menu4{
+	background-image:url("imgs/materialy.png");
+	background-size:cover;
+}
+
+
+/*****************************************SLIDER****************************************************/
+
+#sliderr{
+	height:250px;
+	width:1000px;
+	/*width:100%;*/
+	/*background-color:#d0d4cd;
+	border-radius:15px;*/
+	box-shadow:inset 0 0 20px #358240;
+	-webkit-box-shadow:inset 0 0 20px #358240;
+	-moz-box-shadow:inset 0 0 20px #358240;
+	
+}
+
+slider {
+	 display: block;
+	 width:52.45%;
+	 /*width:13.10%;*/
+	/*width: 998px;*/
+	 height: 250px;
+	 background-color: #d0d4cd;
+	 overflow: hidden;
+	 position: absolute;
+	 float:left;
+	 border-radius:15px;
+ 	 box-shadow:inset 0 0 40px #358240;
+	-webkit-box-shadow:inset 0 0 40px #358240;
+	-moz-box-shadow:inset 0 0 40px #358240;
+	
+	margin-top:10px;
+}
+
+slider > * {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	/*width: 1000px;*/
+	 /*height: 250px;*/
+	 background: #d0d4cd;
+	 animation: slide 12s infinite;
+	 overflow: hidden;
+	 border-radius:15px;
+ 	 box-shadow:inset 0 0 40px #358240;
+	-webkit-box-shadow:inset 0 0 40px #358240;
+	-moz-box-shadow:inset 0 0 40px #358240;
+
+}
+
+slide:nth-child(1){
+	 left: 0%;
+	 animation-delay: -1s;
+	 background-image: url(imgs/1.jpg);
+	 background-size: 100% 100%;
+	 background-position: center;
+}
+
+slide:nth-child(2){
+	 animation-delay: 2s;
+	 background-image: url(imgs/2.jpg);
+	 background-size: 100% 100%;
+	 background-position: center;
+}
+
+slide:nth-child(3){
+	 animation-delay: 5s;
+	 background-image: url(imgs/3.jpg);
+	 background-size: 100% 100%;
+	 background-position: center;
+}
+
+slide:nth-child(4){
+	 left: 0%;
+	 animation-delay: 8s;
+	 background-image: url(imgs/4.jpg);
+	 background-size: 100% 100%;
+	 background-position: center;
+}
+
+slide p {
+	 font-family: Comfortaa;
+	 font-size: 10px;
+	 text-align: center;
+	 display: inline-block;
+	 width: 100%;
+	 /*width:52.45%;*/
+	 /*width: 1000px;*/
+	/* margin-top: 340px;*/
+	 /*margin-top: 0px;*/
+	 color: #ffff;
+	 margin-top:10px;
+}
+
+@keyframes slide {
+	 0% { left: 100%; width: 100%; }
+	 5% { left: 0%; }
+	 25% { left: 0%; }
+	 30% { left: -100%; width: 100%; }
+	 30.0001% { left: -100%; width: 0%; }
+	 100% { left: 100%; width: 0%; }
+}
+/*****************************************KONIEC SLIDER****************************************************/
+/*****************************************KONIEC CONTENT****************************************************/
+
+
+/*****************************************POZOSTALE****************************************************/
+
+#pozostale{
+	width:1000px;
+	height:830px;
+	margin:0px auto 0px auto;
+}
+
+#jokesContainer{
+	width:925px;
+	height:240px;
+	background-color:#d0d4cd;
+	padding-left:75px;
+	padding-top:10px;
+}
+#joke{
+	width:850px;
+	height:230px;
+	border-radius:10px;
+	background-color:purple;
+}
+
+
+#cytatyContainer{
+	width:713px;
+	height:220px;
+	background-color:#d0d4cd;
+	margin-top:60px;	
+	padding-left:287px;
+	padding-top:10px;	
+}
+
+#cytaty{
+	width:426px;
+	height:200px;
+	background-color:purple;
+	border-radius:10px;
+}
+
+#kulinariaContainer{
+	width:925px;
+	height:220px;
+	background-color:#d0d4cd;
+	margin-top:60px;
+	padding-left:75px;
+	padding-top:10px;	
+}
+
+#kulinaria{
+	width:850px;
+	height:200px;
+	background-color:purple;
+	border-radius:10px;
+}
+
+footer{
+	width:100%;
+	height:40px;
+	background-color:#102b1a;
+	text-align:center;
+}
+
+
+
+
+/*****************************************KONIEC POZOSTALE****************************************************/
+/***********************************************SNAKE*************************************************************/
+#contentContainerSnake{
+	width:1300px;
+	height:1500px;
+	background-color:#b9bdb7;
+	margin:0px auto 0px auto;
+}
+/*****************************************KONIEC SNAKE****************************************************/
+
+
+
+
