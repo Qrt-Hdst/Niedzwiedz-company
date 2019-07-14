@@ -498,7 +498,7 @@ a{
 	height:20%;
 }
 
-/*==============GIERKI===========================================================*/
+/*==============KOSCIUSZKOGAME===========================================================*/
 #gierka {
 	/*position: absolute;*/
 	top: 80%;
@@ -531,4 +531,33 @@ a{
 
 
 
-/*==============GIERKI===========================================================*/
+/*==============KOSCIUSZKOGAME END===========================================================*/
+
+
+
+/*==============ChelmianWayToAutonomise===========================================================*/
+
+#gierkaFlappyBirds {
+	/*position: absolute;*/
+	top: 80%;
+	left: 50%;
+	text-align:center;
+	}
+	
+
+#gameCanvasFlappyBirds {
+	/*
+	background-color:green;
+	position:relative;
+	width: 100%;
+	height:100%;
+	*/
+	border:1px solid #d3d3d3;
+	background-color: #f1f1f1;	
+}
+
+
+/*==============END ChelmianWayToAutonomise===========================================================*/
+
+
+
