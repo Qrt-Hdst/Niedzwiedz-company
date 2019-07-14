@@ -17,7 +17,7 @@ aside{
 	/*width:1000px;*/
 	width:52.45%;
 	float:left;
-	height:1500px;
+	height:80%;
 }
 
 footer{
@@ -486,7 +486,19 @@ a{
 	color:black;
 }
 
-/*==============GIERKI===========================================================*/
+
+/*==============ListaGier========================================================*/
+
+#listaGier {
+
+}
+
+#kosciuszkoGame {
+	width: 20%;
+	height:20%;
+}
+
+/*==============KOSCIUSZKOGAME===========================================================*/
 #gierka {
 	/*position: absolute;*/
 	top: 80%;
@@ -494,11 +506,11 @@ a{
 	text-align:center;
 	}
 	
-  #score {
-		text-align: center; /*środkuje zarówno tekst jak i same elementy wewnatrz*/
-		font-size: 140px;
-		font-family: 'Antic Slab', serif;
-		}
+#score {
+	text-align: center; /*środkuje zarówno tekst jak i same elementy wewnatrz*/
+	font-size: 140px;
+	font-family: 'Antic Slab', serif;
+	}
 
 #gameCanvas {
 	/*position: absolute;
@@ -519,4 +531,33 @@ a{
 
 
 
-/*==============GIERKI===========================================================*/
+/*==============KOSCIUSZKOGAME END===========================================================*/
+
+
+
+/*==============ChelmianWayToAutonomise===========================================================*/
+
+#gierkaFlappyBirds {
+	/*position: absolute;*/
+	top: 80%;
+	left: 50%;
+	text-align:center;
+	}
+	
+
+#gameCanvasFlappyBirds {
+	/*
+	background-color:green;
+	position:relative;
+	width: 100%;
+	height:100%;
+	*/
+	border:1px solid #d3d3d3;
+	background-color: #f1f1f1;	
+}
+
+
+/*==============END ChelmianWayToAutonomise===========================================================*/
+
+
+

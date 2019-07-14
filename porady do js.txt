@@ -7,3 +7,9 @@ selektor okresla do ktorego elementu/elementow sie odnosi
 ksiazka strona 61/644
 
 znak dolara w JS
+
+ksiazka strona 103/644
+
+
+
+
