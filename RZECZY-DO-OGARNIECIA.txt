@@ -1,0 +1,12 @@
+1. gierki html - przydałoby się 8 slotów
+2. grafiki do flappy birds - zalozmy na razie ze potrzebne nam do pierwszego levela
+, do czasów słowiańskich ( od razu możesz coś podrzucić z muzyki pietrke? z 
+ słowiańskich rzeczy do muzyki )
+3. kosciuszkoBall, trzeba dodać rosjan, usunąć wywalanie się na ścianach
+, też by się przydało żeby głowa była kościuszkoballem a te balle za nim
+były już polskimi kosynierami, bez tego płaszcza/sukmany 
+4. warcaby - kto z kim
+5. cytaty ? kulinaria ? kawały ?
+6. co daje ajax - doczytać
+7. Zastosować ASCII doc do tworzenia dokumentów?
+8. Uzupełnić ściąge do githuba

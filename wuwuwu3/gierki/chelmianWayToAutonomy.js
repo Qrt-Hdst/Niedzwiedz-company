@@ -1,125 +1,146 @@
-//STAŁE
+//test JavascriptFile
+//gdy testujesz upewnij się że potem nie ma znowu wywołania getContext
+//bo ono je zamaluje
+// var c = document.getElementById("gameCanvasFlappyBirds");
+// var ctx = c.getContext("2d");
+// ctx.rect(20, 20, 150, 100);
+// ctx.stroke();
 
-//ZMIENNE
-var myGamePiece;
-var myObstacles = [];
-var myScore;
+///select our canvas and getContext 2d
 
-function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
-    myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-    myGameArea.start();
+let cvs = document.getElementById("gameCanvasFlappyBirds");
+let ctx = cvs.getContext("2d");
+
+
+//Create Image
+let bird = new Image();
+let bg = new Image(); //background upper
+let fg = new Image(); //floor background
+let pipeNorth = new Image();
+let pipeSouth = new Image();
+
+//download source from url
+
+bird.src = "images/bird.png";
+bg.src = "images/bg.png"; //background upper
+fg.src = "images/fg.png"; //floor background
+pipeNorth.src = "images/pipeNorth.png";
+pipeSouth.src = "images/pipeSouth.png";
+
+//Create sounds
+var fly = new Audio();
+var scor = new Audio();
+
+//download source from url
+fly.src = "sounds/fly.mp3";
+scor.src = "sounds/score.mp3";
+
+// gap between pipe north and south
+var gap = 85;
+
+//the constant is the south pipe position, and it is calculating by adding
+//the gap to the north Pipe
+var constant;
+
+//the bird X and Y positions
+var bX = 10;
+var bY = 150;
+
+// that variable say how pixels brd falls at time
+var gravity = 1.5;
+
+// we initiate the players score
+var score = 0;
+
+//The player control the bird using any key on the keyboard
+//We need to ad an eventListener to our document, and when the player p
+// press a key, we run a function moveUp, that will move up 
+document.addEventListener("keydown", moveUp);
+
+//function to move
+function moveUp() {
+  bY -= 25;
+  fly.play();
 }
 
-var myGameArea = {
-    canvas : document.createElement("gameCanvasFlappyBirds"),
-    start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 20);
-        },
-    clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-}
+//table for pipe
+var pipe = [];
 
-function component(width, height, color, x, y, type) {
-    this.type = type;
-    this.score = 0;
-    this.width = width;
-    this.height = height;
-    this.speedX = 0;
-    this.speedY = 0;    
-    this.x = x;
-    this.y = y;
-    this.gravity = 0;
-    this.gravitySpeed = 0;
-    this.update = function() {
-        ctx = myGameArea.context;
-        if (this.type == "text") {
-            ctx.font = this.width + " " + this.height;
-            ctx.fillStyle = color;
-            ctx.fillText(this.text, this.x, this.y);
-        } else {
-            ctx.fillStyle = color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-        }
-    }
-    this.newPos = function() {
-        this.gravitySpeed += this.gravity;
-        this.x += this.speedX;
-        this.y += this.speedY + this.gravitySpeed;
-        this.hitBottom();
-    }
-    this.hitBottom = function() {
-        var rockbottom = myGameArea.canvas.height - this.height;
-        if (this.y > rockbottom) {
-            this.y = rockbottom;
-            this.gravitySpeed = 0;
-        }
-    }
-    this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }
-        return crash;
-    }
-}
-
-function updateGameArea() {
-    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
-    for (i = 0; i < myObstacles.length; i += 1) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            return;
-        } 
-    }
-    myGameArea.clear();
-    myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
-        x = myGameArea.canvas.width;
-        minHeight = 20;
-        maxHeight = 200;
-        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
-        maxGap = 200;
-        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "green", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
-    }
-    for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += -1;
-        myObstacles[i].update();
-    }
-    myScore.text="SCORE: " + myGameArea.frameNo;
-    myScore.update();
-    myGamePiece.newPos();
-    myGamePiece.update();
-}
-
-function everyinterval(n) {
-    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
-    return false;
-}
-
-function accelerate(n) {
-    myGamePiece.gravity = n;
-}
+pipe[0] = {
+  x : cvs.width, 
+  y : 0
+};
 
 
+//draw Image
 
-// Start game
-startGame()
+function draw() {
 
+  ctx.drawImage( bg, 0, 0); //rysowania na canvasie
+  
+  for (var i = 0; i < pipe.length ; i++ ){
+    
+      constant = pipeNorth.height + gap; // position of northPipe
+      ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y );
+      ctx.drawImage(pipeSouth, pipe[i].x, pipe[i].y + constant );
+
+      pipe[i].x--;
+
+      if( pipe[i].x == 125 ){
+        pipe.push({
+            x : cvs.width,
+            y : Math.floor(Math.random()*pipeNorth.height) - pipeNorth.height
+        });
+      }
+
+      //detect collision
+
+      //1 warunek
+      //jesli szerokosc + pozycja ptaka jest wieksza 
+      //od pozycji X rury plus szerokosc  rury
+      //bX + bird.width >= pipe[i].x + pipeNorth.width 
+      //i polożenie X ptaka jest jednocześnie mniejsze od szerokości i pozycji X rury 
+      //&& bX <= pipe[i].x + pipeNorth.width 
+
+      //2 warunek
+      // do poprzedniego jesli jest dolozony
+      //polożenie Y ptaka jest mniejsze wykosci rury plus pozycji Y (pozycja Y jest zero)
+      //bY <= pipe[i].y + pipeNorth.height
+      //ewentualnie połozenie + wysokośc ptaka jest wieksze od 
+      //constans ( a więc wykosc Płn rury plus przerwa)
+      // to cos
+      //bY+bird.height >= pipe[i].y+constant
+
+      //3 warunek 
+      //sprawdza czy ptak plus wysokosc jest wieksze od floor grounda
+      //żeby nie walnął w ziemie
+      if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width 
+        && (bY <= pipe[i].y + pipeNorth.height 
+          || bY+bird.height >= pipe[i].y+constant) 
+        || bY + bird.height >=  cvs.height - fg.height)
+      {
+        //location.reload();
+      }
+
+      if( pipe[i].x == 5 ) {
+          score++;
+          scor.play() // to muzyka
+      }
+    }
+
+    ctx.drawImage( fg, 0, cvs.height - fg.height);
+    ctx.drawImage( bird, bX, bY);
+
+    bY += gravity;
+
+    ctx.fillStyle = "#000";
+    ctx.font = "20px Verdana";
+    ctx.fillText("Score :" + score, 10, cvs.height - 20);
+
+    requestAnimationFrame(draw);
+
+
+  }
+
+
+draw();
