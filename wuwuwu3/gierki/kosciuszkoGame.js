@@ -9,9 +9,6 @@
   const FOOD_COLOUR = 'red';
   const FOOD_BORDER_COLOUR = 'darkred';
 
-
- 
-
 function component(width, height, color, x, y, type) {
   this.type = type;
   if (type == "image") {
