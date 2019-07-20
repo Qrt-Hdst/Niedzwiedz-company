@@ -42,7 +42,6 @@ git fetch -p
 git pull
 git push -u origin master
 
-
 --------------
 7.Usuniecie galezi 
 

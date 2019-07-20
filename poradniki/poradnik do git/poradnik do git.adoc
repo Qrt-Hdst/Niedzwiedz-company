@@ -3,14 +3,14 @@
 
 = GIT 
 
-=== 0. Dla pewności ze stworzymy gałąź na podstawie aktualnego masterze
+==== 0. Dla pewności ze stworzymy gałąź na podstawie aktualnego masterze
 
  git checkout master
  git fetch -p
  git rebase origin/master
  
 
-=== 1. Tworzymy gałąź
+==== 1. Tworzymy gałąź
 
  git branch mkusy/nazwa-brancha
 
@@ -18,11 +18,11 @@ WARNING: prosiłbym o wpisywanie nazwy użytkownika przy tworzeniu nazwy brancha
  
 w efekcie uzyskujemy nową gałąż która jest oparta na masterze
 
-=== 2. przenosimy się do powstałego brancha
+==== 2. przenosimy się do powstałego brancha
 
  git checkout mkusy/nazwa-brancha
 
-=== 3. Dzialanie na branchu
+==== 3. Dzialanie na branchu
 
 https://git-scm.com/book/pl/v1/Pierwsze-kroki-Podstawy-Git
 polecam tą stronkę do przejrzenia 
@@ -34,7 +34,7 @@ ogólnie są trzy przestrzenie
 
 - Working directory - folder roboczy - to co masz na kompie
 
-===== pokazanie które pliki są w przechowalni( i beda scommitowane przy uzyciu git commit ), a które nie 
+====== pokazanie które pliki są w przechowalni( i beda scommitowane przy uzyciu git commit ), a które nie 
  
  git status
 
@@ -44,13 +44,40 @@ image::poradnik do git2.png[]
 
  git add -A
  
-image::poradnik do git2.png[]
+image::poradnik do git3.png[]
  
 przesuwa wszystkie pliki zmodyfikowane przez cb do indexu
 
+ git commit -m "Nazwa commita"
 
+image::poradnik do git4.png[]
 
-==== Dodanie mergetoola do git-a 
+Pokazuje zrobione przez nas commity na tym branchu
+ 
+ git log
+
+=== 4. Publikujemy branch 
+
+ git push -u origin nasz-branch
+ 
+i mamy już backup na serwerze naszych zmian
+
+=== 5. Merge z masterem lokalnym
+
+ git checkout master
+
+przenosimy się do master, jeśli bedzie robił problemy wpisz git status i zobacz jakie pliki nie zostały zcommitowane i przeszkadzają
+
+ git merge nasz-branch
+
+=== 6. Opublikowanie zmergowania na serwerze
+
+git fetch -p
+git rebase origin/master
+git push -u origin master
+ 
+ 
+== Dodanie mergetoola do git-a 
 
 1. Instalka https://sourceforge.net/projects/kdiff3/
 
