@@ -1,6 +1,3 @@
-
-
-
 trzymamy się konwecji - nowy dzień - tworzenie nowej galezi  żeby ne bylo balaganu - nazwa galezi moze byc smieszkowa ale jak nie to po prostu dzien albo ccel do zrobienia
 
 staramy sie uzywac konsoli
@@ -44,7 +41,6 @@ II)git merge chelm-ludowy
 git fetch -p 
 git pull
 git push -u origin master
-
 
 --------------
 7.Usuniecie galezi 
