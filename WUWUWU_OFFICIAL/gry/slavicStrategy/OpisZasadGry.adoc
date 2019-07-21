@@ -7,8 +7,8 @@
 * możnowładcy
 * wojowie
 * kmiecie
-* kowale
 * ubodzy kmiecie
+* rzemieślniki
 * niewolnicy
 * chąśnicy
 * rybacy
