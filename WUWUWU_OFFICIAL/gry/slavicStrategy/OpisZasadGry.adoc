@@ -1,0 +1,86 @@
+= SlavicStrategy
+
+== Grupy społeczne
+
+* wołchowie
+* żercy
+* możnowładcy
+* wojowie
+* kmiecie
+* kowale
+* ubodzy kmiecie
+* niewolnicy
+* chąśnicy
+* rybacy
+* wytwórcy
+
+== Zasoby
+
+* bogactwo
+* chwała
+* wsparcie bogów
+
+== Rodzaje osad służebnych
+
+* garncarskie
+* konne
+* kowalskie
+* kołodziejskie
+* miodowe
+* piwne
+* szkutnicze
+* bednarskie
+
+== Typy władzy
+
+=== słowiańskie
+
+* wiecowy
+* wodzowski
+* możnowładzki
+* chąśnicki
+* wędrowny 
+* arcywołchowski
+
+=== stepowe
+
+* trybalny 
+* stepowy
+* pół-osiadły
+
+=== chrześcijańskie
+
+* feudalne
+* republiki
+* biskupstwo
+
+
+
+== Religia
+
+=== Wierzenia słowiańskie
+
+* Świętowida
+* Peruna
+* Trygław
+* Rod
+* Swaróg
+* Weles
+
+=== Wierzenia Bałtyckie
+
+* Perkun
+* Deiwan
+
+=== Wierzenia Nordyckie
+
+* Thor
+* Odyn
+
+=== Tengryści
+
+=== Chrześcijaństwo
+
+* kościół Katolicki
+* kościół Prawosławny
+* kościół Cyryla i Metodego
