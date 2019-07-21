@@ -54,15 +54,21 @@
 					</slider>
 				</div>
 				<nav>
-					<div id="menuContainer">
-						<a href="gry/menugry.html"><div class="menu1"></div></a>
+<<<<<<< HEAD
+					<div id="menu">
+						<ul id="listamenu">
 							<a href="gry/menugry.html"><li class="menu1"> GRY </li></a>
-						<a href="#"><div class="menu3"></div></a>
-						<a href="#"><div class="menu4"></div></a>
 							<a href="#"><li class="menu2"> KOMIXY </li></a>
 							<a href="#"><li class="menu3"> MEMY </li></a>
 							<a href="#"><li class="menu4"> MATERIAŁY </li></a>
 						</ul>
+=======
+					<div id="menuContainer">
+						<a href="gry/menugry.html"><div class="menu1"></div></a>
+						<a href="#"><div class="menu2"></div></a>
+						<a href="#"><div class="menu3"></div></a>
+						<a href="#"><div class="menu4"></div></a>
+>>>>>>> porzadkowanie-drzewa-dom
 					</div>
 				</nav>
 			</div> <!--slidermenu-->
@@ -87,47 +93,6 @@
 				</div>
 			</section>
 		</div><!--content-->
-				
-			</header>
-			
-			<article>
-				<div id="jokescontent">
-					<div id="joke">
-						JOKES
-					</div>
-				</div>
-				<div id="cytatycontent">
-					<div id="cytaty">
-						CYTATY
-					</div>
-				</div>
-				<div id="kulinariacontent">
-					<div id="kulinaria">
-						KULINARIA
-					</div>
-				</div>
-			</article>
-		</div> <!--central-->
-		
-		<aside>
-			<div id="dologowania">
-				<div id="logowanie">
-					LOGOWANIE
-				</div>
-			</div>
-			<div id="linki">
-				linki
-				<!--<div id="L1">
-					FB
-				</div>
-				<div id="L2">
-				</div>-->
-			</div>
-			<div id="daniel">
-				<a href="#"><img src="img/daniel.png" alt="daniel"/></a>
-			</div>
-		</aside>		
-		
 		<footer>
 			<p class="futer">won gnoje</p>
 		</footer>

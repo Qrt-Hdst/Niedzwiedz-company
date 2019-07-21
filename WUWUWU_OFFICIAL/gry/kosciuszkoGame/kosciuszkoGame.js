@@ -86,7 +86,7 @@ function clearmove() {
     let dy = 0;
 
     // Get the canvas element
-    const gameCanvas = document.getElementById("gameCanvas");
+    const gameCanvas = document.getElementById("gameCanvasKosciuszko");
     //wysokosc canvasa uzyskam przez gameCanvas.height, gameCanvas.width
     // Return a two dimensional drawing context
     const ctx = gameCanvas.getContext("2d");
@@ -180,7 +180,7 @@ function clearmove() {
         // Increase score
         score += 10;
         // Display score on screen
-        document.getElementById('score').innerHTML = score;
+        //document.getElementById('score').innerHTML = score;
 
         // Generate new chelmianRecrut location
         createChelmianRecrut();
