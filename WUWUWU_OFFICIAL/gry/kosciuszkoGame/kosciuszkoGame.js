@@ -15,6 +15,7 @@ function component(width, height, color, x, y, type) {
       this.image = new Image();
       this.image.src = color;
   }
+
   this.width = width;
   this.height = height;
   this.speedX = 0;
@@ -92,11 +93,11 @@ function clearmove() {
 
     function makeImages(){
       chelmball = new Image();
-      chelmball.src = 'img_snake/chelmkosckosa MINI.png';
+      chelmball.src = 'img_kosciuszkoGame/chball.png';
       kosciuszkoball = new Image();
-      kosciuszkoball.src = 'img_snake/koscMINI.png';
+      kosciuszkoball.src = 'img_kosciuszkoGame/kball.png';
       russianBall = new Image();
-      russianBall.src = 'img_snake/rus1.png';
+      russianBall.src = 'img_kosciuszkoGame/rus1.png';
       //chelmball.onload = function(){
         //ctx.drawImage(chelmball,0,0,50,50);
       //}
