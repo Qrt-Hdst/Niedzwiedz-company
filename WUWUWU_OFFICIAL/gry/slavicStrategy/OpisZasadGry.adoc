@@ -14,7 +14,7 @@
 * rybacy
 * wytwórcy
 
-== Zasoby
+== Wskazniki
 
 * bogactwo
 * chwała
@@ -53,8 +53,6 @@
 * feudalne
 * republiki
 * biskupstwo
-
-
 
 == Religia
 

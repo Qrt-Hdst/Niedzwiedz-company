@@ -1,0 +1,27 @@
+= Serwer 
+
+=== Zmiana ścieszki z httdocs na naszą
+
+wchodzimy do ścieszki 
+C:\xampp\apache\conf -->plik httpd.conf
+
+Około linia 250 powinien się znajdowąć
+
+ DocumentRoot "K:/chełm/Niedzwiedz-company"
+<Directory "K:/chełm/Niedzwiedz-company">
+
+Ustawiamy na swoją ścieszke jaką ma być
+Uwaga ! slash-e skopiowane z win trzeba zmienić na takie jak powyżej
+
+
+=== Zmiana nazwy "localhost" na ocś bardziej swojskiego
+
+odpal ścieszke C:\Windows\System32\drivers\etc
+
+zrób kopie hosts i nazwij ją hosts.original
+
+odpal w trybie administratora plik hosts i
+
+ 127.0.0.1 localhost 
+ 
+Zmień nazwe localhost na coś bardziej swojskiego
