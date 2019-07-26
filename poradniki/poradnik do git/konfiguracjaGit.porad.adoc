@@ -1,0 +1,38 @@
+wpisujemy polecenie 
+
+====== 1. Konsola git bash
+wklepujemy do konsoli
+
+ ssh-keygen -t rsa -b 4096 "adonnibal96@gmail.com"
+
+pokaże się
+ 
+ Enter file in which to save the key (/c/Users/Matball/.ssh/id_rsa): - ja nie zmieniałem
+ 
+ potem prosi o podanie parafraz - dajemy dwa razy enter zeby sie nie bawić
+ 
+====== 2.Dodanie klucza SSH do ssh agent
+
+Teraz powinniśmy dodać nasz nowo utworzony klucz do agenta SSH. Jeżeli używamy Git Bash to agent powinien być uruchomiony, jeżeli natomiast nie jest możemy użyć polecenia w konsoli.
+
+ eval $(ssh-agent -s)
+
+Dodawanie klucza jest proste, wystarczy wydać polecenie (gdzie ~/.ssh/id_rsa to lokalizacja klucza)
+
+ ssh-add ~/.ssh/id_rsa
+
+======= 3. Dodanie klucza SSH do konta Github
+
+Otwieramy plik id_rsa.pub zwykłym edytorem tekstu (notepad, notatnik, itp) i kopiujemy jego całą zawartość.
+Przechodzimy na stronę https://github.com/settings/keys lub wybieramy ręcznie z ustawień:
+
+warning: Uwaga przez całość mam na myśli całość - to że na początku jest ssh nie ma znaczenia
+
+======= 4. Testy
+
+ ssh -T git@github.com
+
+W odpowiedzi powinniśmy otrzymać 
+
+ Hi <em>islandia18</em>! You've successfully authenticated, but GitHub does not
+provide shell access.
