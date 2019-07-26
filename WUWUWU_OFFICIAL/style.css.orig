@@ -358,12 +358,6 @@ footer{
 	margin:0px auto 0px auto;
 }
 
-#TytulKosciuszko {
-	width:100%;
-	height:70x;
-	text-align: center;
-}
-
 #scoreKosciuszko {
 	font-family: Comfortaa;
 	font-size: 80px;
@@ -374,7 +368,11 @@ footer{
 
 #gameCanvasKosciuszko {
 	width:100%;
-	height:80%;
+<<<<<<< HEAD
+	height:90%;
+=======
+	height:100%;
+>>>>>>> Poprawki w DOM-ie
 }
 
 /*****************************************KONIEC SNAKE****************************************************/

@@ -1,0 +1,116 @@
+= Vim poradnik 
+
+WARNING: Aby powrócić do poleceń wciskamy [ESC].
+
+WARNING: wyjście z edytora :q
+
+WARNING: zapis i natychmiastowe wyjście :wq 
+
+=== vim tryby pracy
+
+====== normal 
+
+	poruszanie po dokumencie i zaznaczanie kawałków tekstu
+	
+====== insert --> klawisz "i" 
+
+ w trypie wprowadz się tekst poprzez dopisywanie znaków w miejsce kursora
+ 
+====== replace --> klawisz "r"
+ 
+ 
+====== select ---> klawisz "v"
+ poprzez wcisniecie klawisza v zaznaczamy kawałki tekstu
+
+====== command line 
+
+ to jest tryb wprowadzania komend do którego przechodzimy po wciśnieciu klawisz :
+ 
+==== podstawowe komendy 
+ 
+ h 	przesunięcie w lewo 	normal
+l 	przesunięcie w prawo 	normal
+j 	przesunięcie w dół 	normal
+k 	przesunięcie w górę 	normal
+i 	przejście w tryb insert 	normal
+Ctrl+d 	przesunięcie ekranu o połowę jego wysokości w dół 	normal
+Ctrl+u 	przesunięcie ekranu o połowę jego wysokości w górę 	normal
+Ctrl+f 	przesunięcie ekranu o całą jego wysokość w dół 	normal
+Ctrl+b 	przesunięcie ekranu o całą jego wysokość w górę 	normal
+gg 	przejście do pierwszej linii w pliku 	normal
+G 	przejście do ostatniej linii w pliku 	normal
+H 	przejście do pierwszej widocznej na ekranie linii (skrót od High) 	normal
+M 	przejście do środkowej widocznej na ekranie linii (skrót od Medium) 	normal
+L 	przejście do ostatniej widocznej na ekranie linii (skrót od Low) 	normal
+Esc 	wyjście z trybu insert lub replace do normal 	insert
+a 	przejście do trybu insert wraz z przesunięciem w prawo 	normal
+o 	dodanie nowej linii poniżej bieżącej i przejście do trybu insert na początku nowej linii 	normal
+I 	przejście do trybu insert wraz z przesunięciem do pierwszego znaku drukowalnego w linii 	normal
+A 	przejście do trybu insert wraz z przesunięciem na koniec linii 	normal
+O 	dodanie nowej linii powyżej bieżącej i przejście do trybu insert w nowej linii 	normal
+: 	przejście w tryb command-line 	normal
+<NR> 	przejście do linii o podanym numerze 	command-line
+q 	wyjście z edycji pliku 	command-line
+w 	zapisanie pliku 	command-line
+w <NAZWA_PLIKU> 	zapisanie pliku pod nazwą <NAZWA_PLIKU> 	command-line
+wq 	zapisanie pliku i wyjście z edycji 	command-line
+e 	ponowne otwarcie bieżącego pliku 	command-line
+e <NAZWA_PLIKU> 	otwarcie w bieżącym oknie pliku <NAZWA_PLIKU> do edycji 	command-line
+q! 	wyjście z edycji pliku, nawet jeśli zmiany nie zostały zapisane 	command-line
+qa 	wyjście z edycji wszystkich otwartych plików (quitall) 	command-line
+!<SYSCMD> 	uruchomienie dowolnej komendy powłoki systemu. 	command-line
+. 	powtórzenie ostatnio wykonanej akcji 	normal
+u 	wycofanie ostatniej akcji (undo) 	normal
+Ctrl+r 	ponowne wykonanie wycofanej akcji 	normal
+
+==== Trudniejsze komendy
+
+r 	zamiana znaku pod kursorem (po wciśnięciu znaków znowu jesteśmy w trybie normal) 	normal
+R 	przejście w tryb replace 	normal
+x 	usunięcie znaku pod kursorem 	normal
+dd 	usunięcie bieżącej linii 	normal
+dw 	usunięcie od kursora do początku następnego słowa 	normal
+d0 	usunięcie znaków w bieżącej linii od pierwszego do kursora 	normal
+d$ 	usunięcie znaków w bieżącej linii od kursora do końca linii 	normal
+D 	j.w. 	normal
+J 	złączenie linijki bieżącej i następnej, oddzielając spacją, usuwając wcięcia 	normal
+gJ 	złączenie linijki bieżącej i następnej 	normal
+^ 	przesunięcie do pierwszego znaku drukowalnego w linii 	normal
+0 	przesunięcie na początek linii 	normal
+$ 	przesunięcie na koniec linii 	normal
+w 	przejście do początku następnego wyrazu 	normal
+e 	przejście do końcu bieżącego wyrazu (lub następnego, jeśli jesteśmy na końcu bieżącego) 	normal
+b 	przejście do początku bieżącego wyrazu (lub poprzedniego, jeśli jesteśmy na początku bieżącego) 	normal
+% 	przejście do odpowiadającego nawiasu (otwierającego/zamykającego) 	normal
+gh 	przejście do poprzedniej linii (bierze pod uwagę linie łamane) 	normal
+gj 	przejście do następnej linii (bierze pod uwagę linie łamane) 	normal
+/ 	rozpoczęcie szukania w dół (należy wpisać szukany tekst i zatwierdzić Enterem) 	normal
+? 	jw., ale szukanie w górę 	normal
+n 	szukaj następnego wystąpienia 	normal
+N 	szukaj poprzedniego wystąpienia 	normal
+* 	szukaj w dół słowa pod kursorem (pełnego słowa) 	normal
+# 	szukaj w górę słowa pod kursorem (pełnego słowa) 	normal
+v 	rozpoczęcie trybu visual z dokładnością do znaku 	normal
+V 	rozpoczęcie trybu visual z dokładnością do linii (zaznaczanie pełnymi liniami) 	normal
+Ctrl+v 	rozpoczęcie trybu visual blokowo (pionowo) 	normal
+y 	skopiowanie do schowka (schowka edytora, nie systemowego) zaznaczonego tekstu 	visual
+d 	usunięcie zaznaczonego tekstu, wraz z kopiowaniem do schowka 	visual
+p 	wklejenie skopiowanego tekstu za kursorem 	visual
+P 	wklejenie skopiowanego tekstu przed kursorem 	visual
+< 	po zaznaczeniu pełnych linii zmniejsza wcięcie bloku zgodnie z ustawieniami Vima 	visual
+> 	po zaznaczeniu pełnych linii zwiększa wcięcie bloku zgodnie z ustawieniami Vima 	visual
+I 	po zaznaczeniu pionowym przechodzi w tryb insert celem dopisania dowolnego tekstu 	visual
+x 	po zaznaczeniu pionowym usuwa zaznaczony kawałek tekstu 	visual
+"<ZNAK>y 	skopiowanie zaznaczonego tekstu do schowka nazwanego znakiem a-z 	visual
+"<ZNAK>p 	wklejenie z nazwanego schowka za kursorem 	normal
+"<ZNAK>P 	wklejenie z nazwanego schowka przed kursorem 	visual
+m<ZNAK> 	zaznacza bieżące miejsce w pliku pod wskazanym znakiem a-z 	normal
+'<ZNAK> 	przechodzi do zaznaczonego wcześniej miejsca w pliku; <ZNAK>: j.w. 	normal
+%s/<S1>/<S2>/ 	zamiana w całym dokumencie wystąpień tekstu <S1> na <S2> 	command-line
+:s/<S1>/<S2>/ 	zamiana w zaznaczonym tekście wystąpień tekstu <S1> na <S2> 	visual
+Ctrl+n 	dopełnienie słowa do innego, występującego już w pliku; szukanie w przód 	insert
+Ctrl+p 	dopełnienie słowa do innego, występującego już w pliku; szukanie w tył 	insert
+gf 	otwarcie pliku o nazwie wskazanej przez kursor w pliku bieżącym 	normal
+Ctrl+w f 	otwarcie pliku jak wyżej, ale w nowym oknie (split) 	normal
+Ctrl+w gf 	otwarcie pliku jak wyżej, ale w nowej zakładce (tab) 	normal
+
