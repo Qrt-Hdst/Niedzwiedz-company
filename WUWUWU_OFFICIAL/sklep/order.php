@@ -1,15 +1,14 @@
 <!DOCTYPE HTML>
-<html lang="pl">
+<html>
 <head>
     <meta charset="utf-8" />
     <title>Podsumowanie zamówienia</title>
     <link rel="stylesheet" href="../style.css" type="text/css">
 	<link rel="stylesheet" href="../css/fontello.css" type="text/css">
 </head>
-
-</body>
-<main>
-<header>
+<body>
+    <main>
+    <header>
 			<div id="topContainer">
 				<div id="jezyki">
 					<ul id="jezykk">
@@ -28,19 +27,27 @@
 				</div>
 			</div> <!----topContainer --->
     </header><!-------header--->
+        <div id="sklep">
+        <?php
+                $koszulek = $_POST['koszulki'];
+                $kubkow = $_POST['kubki'];
+                $suma = 20*$koszulek + 10*$kubkow;
 
- <div id="sklep">
- <h1>Zamówienie online</h1>
- <form action="order.php" method="post">
-    Ile koszulke(20Pln/szt):
-    <input type="text" name="koszulki" />
-        <br /><br/> 
-    Ile kubków (10Pln/szt):
-    <input type="text" name="kubki"/>
-    <br/> <br/>
-    <input type="submit" value="Wyślij zamówienie" />
-</form>
-</div>
+echo<<<END
+        <h2> Podsumowanie zamówienia</h2>
+        <table border="3" cellpadding="10" cellspacing="0">
+        <tr>
+            <td> Koszulek (20PLN/szt) </td> <td>$koszulek</td>
+        </tr>
+        <tr>
+            <td> Kubków (10PLN/szt) </td> <td>$kubkow</td>
+        </tr>
+        <tr>
+            <td> Suma </td> <td>$suma </td>
+        </tr>
+END;
+?>      
+        </div><!-------sklep------->	
 </main>
 </body>
 </html>

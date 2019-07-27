@@ -1,0 +1,74 @@
+= Bash poradnik
+
+Bardzo fajne bo wystarczy w kolejnych liniach wklejać kolejne 
+gitowe komendy
+
+WARNING: wpisujemy bash nazwapliku.sh
+
+komentarze piszemy poprzez hashe
+
+ # komentarz
+ 
+ 
+== User input
+
+wpisywanie realizujemy poprzez 
+
+	#!/bin/bash
+	echo "Enter Your Name"
+	read name
+	echo "Welcome $name to LinuxHint"
+	
+== if statement 
+
+WARNING: trzeba pisać dokladnie n=10 bo inaczej nie widzi zmiennej
+
+ #!/bin/bash
+n=10
+if [ $n -lt 10 ];
+then
+echo "It is a one digit number"
+else
+
+
+== konkatenacja 
+
+ #!/bin/bash
+string1="Linux"
+string2="Hint"
+echo "$string1$string2"
+string3=$string1+$string2
+string3+=" is a good tutorial blog site"
+echo $string3
+echo "It is a two digit number"
+fi
+
+== tworzenie funkcji
+
+ #!/bin/bash
+function F1()
+{
+echo 'I like bash programming'
+}
+F1
+
+
+== Zwracanie wartosci return
+
+ #!/bin/bash
+function greeting() {
+str="Hello, $name"
+echo $str
+}
+echo "Enter your name"
+read name
+val=$(greeting)
+echo "Return value of the function is $val"
+
+== Czytanie pliku
+
+ #!/bin/bash
+file='book.txt'
+while read line; do
+echo $line
+done < $file

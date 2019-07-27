@@ -26,6 +26,16 @@ WARNING: zapis i natychmiastowe wyjście :wq
 
  to jest tryb wprowadzania komend do którego przechodzimy po wciśnieciu klawisz :
  
+
+====== kopiowanie i wstawianie
+
+ yw – kopiuj do schowka bieżący wyraz
+yb – kopiuj do schowka poprzedni wyraz
+Y – kopiuj do schowka bieżącą linię
+nY – kopiuj następne <n> linii
+p – wklej skopiowany tekst za kursorem
+P – wklej skopiowany tekst przed kursorem 
+
 ==== podstawowe komendy 
  
  h 	przesunięcie w lewo 	normal

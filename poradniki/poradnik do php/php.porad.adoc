@@ -21,3 +21,56 @@ czym się methody get i post różnią przy wysyłaniu?
 get- dokleja do url-a dane o ilości pączków/koszulek
 
 post - nie widać
+
+
+---------
+strona 
+
+index.php 
+
+ </body>
+ <h1>Zamówienie online</h1>
+ <form action="action.php" method="post">
+    Ile koszulke(20Pln/szt):
+    <input type="text" name="koszuki" />
+        <br /><br/> 
+    Ile kubków (10Pln/szt):
+    <input type="text" name="kubki"/>
+    <br/> <br/>
+    <input type="submit" value="Wyślij zamówienie" />
+</form>
+</body>
+
+odpowiedz
+order.php
+
+ <?php
+<body>
+    $koszulek = $_POST['koszulki']
+    $kubków = $_POST['kubki']
+    echo "<h2> Podsumowanie zamówienia</h2>";
+    echo '<table borde="1" cellpadding="10" cellspacing="0">';
+</body>
+
+
+albo tak - stosuje tu długiego enda
+
+
+ <?php
+    $koszulek = $_POST['koszulki'];
+    $kubkow = $_POST['kubki'];
+echo<<<END
+    <h2> Podsumowanie zamówienia</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <td> Koszulek (20PLN/szt) </td> <td>$koszulek</td>
+    </tr>
+    <tr>
+        <td> Kubków (10PLN/szt) </td> <td>$kubkow</td>
+    </tr>
+    <tr>
+        <td> Suma </td> <td>$suma </td>
+    </tr>
+END;
+?>
+

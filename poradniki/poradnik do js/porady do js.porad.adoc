@@ -12,4 +12,7 @@ ksiazka strona 103/644
 
 
 
+https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-avoid-float
+https://seblee.me/2011/02/html5-canvas-sprite-optimisation/
+
 

@@ -17,7 +17,11 @@ Usuwanie z indexu
  
 Zwrócenie nazwy aktualnego brancha
 
- git branch | grep \* | cut -d ' ' -f2
+ git branch | grep \* | cut -d " "  -f2
+ 
+lepiej tworzenie 
+ 
+ alias gitb="git branch | grep \* | cut -d ' ' -f2"
  
 Usuwanie z working directory
  
@@ -39,7 +43,15 @@ Usuwanie z working directory
  
  git config --global alias.aA 'add -A'
  
- git config --global alias.brc "branch | grep \* | cut -d ' ' -f2"
+ git config --global alias.brcurr "branch | grep \* | cut -d \" \" -f2"
+ 
+ git config --global alias.lgs "log --stat"
+ 
+ git config --global alias.lgp "log -p"
+ 
+ git config --global alias.lasts "log --stat -1"
+ 
+ git config --global alias.lastp "log -p -1"
  
  
 Komendy do kdiff3
