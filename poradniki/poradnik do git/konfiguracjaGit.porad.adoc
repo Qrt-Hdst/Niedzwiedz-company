@@ -38,7 +38,6 @@ W odpowiedzi powinniśmy otrzymać
  Hi <em>islandia18</em>! You've successfully authenticated, but GitHub does not
 provide shell access.
 
-
 ======== 5. 
 
 Set a Git username:
