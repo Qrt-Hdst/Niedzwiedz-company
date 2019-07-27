@@ -50,3 +50,5 @@ Confirm that you have set the Git username correctly:
 $ git config --global user.name
 > Mona Lisa
 
+
+git config credential.helper store
