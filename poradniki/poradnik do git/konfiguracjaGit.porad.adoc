@@ -3,6 +3,7 @@ wpisujemy polecenie
 ====== 1. Konsola git bash
 wklepujemy do konsoli
 
+
  ssh-keygen -t rsa -b 4096 "adonnibal96@gmail.com"
 
 pokaże się
@@ -21,14 +22,14 @@ Dodawanie klucza jest proste, wystarczy wydać polecenie (gdzie ~/.ssh/id_rsa to
 
  ssh-add ~/.ssh/id_rsa
 
-======= 3. Dodanie klucza SSH do konta Github
+====== 3. Dodanie klucza SSH do konta Github
 
 Otwieramy plik id_rsa.pub zwykłym edytorem tekstu (notepad, notatnik, itp) i kopiujemy jego całą zawartość.
 Przechodzimy na stronę https://github.com/settings/keys lub wybieramy ręcznie z ustawień:
 
-warning: Uwaga przez całość mam na myśli całość - to że na początku jest ssh nie ma znaczenia
+WARNING: Uwaga przez całość mam na myśli całość - to że na początku jest ssh nie ma znaczenia
 
-======= 4. Testy
+====== 4. Testy
 
  ssh -T git@github.com
 
@@ -36,3 +37,16 @@ W odpowiedzi powinniśmy otrzymać
 
  Hi <em>islandia18</em>! You've successfully authenticated, but GitHub does not
 provide shell access.
+
+
+======== 5. 
+
+Set a Git username:
+
+$ git config --global user.name "Mona Lisa"
+
+Confirm that you have set the Git username correctly:
+
+$ git config --global user.name
+> Mona Lisa
+
