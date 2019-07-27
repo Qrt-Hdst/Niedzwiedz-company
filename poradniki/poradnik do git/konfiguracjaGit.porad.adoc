@@ -40,14 +40,18 @@ provide shell access.
 
 ======== 5. 
 
-Set a Git username:
+edytujemy ~/.gitconfig
 
-$ git config --global user.name "Mona Lisa"
+ sudo vim ~/.gitconfig
 
-Confirm that you have set the Git username correctly:
+Znajdziesz tam to co poniżej - upewnij się że jest dobrze wpisane
 
-$ git config --global user.name
-> Mona Lisa
+ [user]
+	email = your@email.com
+	user = gitUser
+ 
+W pobliżu dodaj
 
-
-git config credential.helper store
+ [credential]
+	helper = store
+	

@@ -40,6 +40,8 @@ Usuwanie z working directory
  git config --global alias.aA 'add -A'
  
  git config --global alias.brc "branch | grep \* | cut -d ' ' -f2"
+ 
+ 
 Komendy do kdiff3
 
  [Ctrl] + [1] 	Wrzuć zmiany z A
