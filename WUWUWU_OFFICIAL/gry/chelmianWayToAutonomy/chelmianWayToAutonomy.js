@@ -13,27 +13,27 @@ let ctx = cvs.getContext("2d");
 
 
 //Create Image
-let bird = new Image();
-let bg = new Image(); //background upper
+let bird = new Image(25,25);
+let bg = new Image(cvs.width, cvs.height); //background upper
 let fg = new Image(); //floor background
 let pipeNorth = new Image();
 let pipeSouth = new Image();
 
 //download source from url
 
-bird.src = "images/bird.png";
-bg.src = "images/bg.png"; //background upper
-fg.src = "images/fg.png"; //floor background
-pipeNorth.src = "images/pipeNorth.png";
-pipeSouth.src = "images/pipeSouth.png";
+bird.src = "img_chelmianWayToAutonomy/zerca.png";
+bg.src = "img_chelmianWayToAutonomy/bg.png"; //background upper
+fg.src = "img_chelmianWayToAutonomy/fg.png"; //floor background
+pipeNorth.src = "img_chelmianWayToAutonomy/pipeNorth.png";
+pipeSouth.src = "img_chelmianWayToAutonomy/pipeSouth.png";
 
 //Create sounds
 var fly = new Audio();
 var scor = new Audio();
 
 //download source from url
-fly.src = "sounds/fly.mp3";
-scor.src = "sounds/score.mp3";
+// /////////fly.src = "sounds/fly.mp3";
+// //////////////scor.src = "sounds/score.mp3";
 
 // gap between pipe north and south
 var gap = 85;
@@ -76,8 +76,7 @@ pipe[0] = {
 
 function draw() {
 
-  ctx.drawImage( bg, 0, 0); //rysowania na canvasie
-  
+  ctx.drawImage( bg, 0, 0, cvs.width, cvs.height-fg.height); //rysowania na canvasie
   for (var i = 0; i < pipe.length ; i++ ){
     
       constant = pipeNorth.height + gap; // position of northPipe
@@ -120,6 +119,7 @@ function draw() {
         || bY + bird.height >=  cvs.height - fg.height)
       {
         //location.reload();
+        ctx.drawRect(10,10,10,10);
       }
 
       if( pipe[i].x == 5 ) {
@@ -127,9 +127,10 @@ function draw() {
           scor.play() // to muzyka
       }
     }
-
+console.log(bird.width+ " width");
+console.log(bird.height+ " height")
     ctx.drawImage( fg, 0, cvs.height - fg.height);
-    ctx.drawImage( bird, bX, bY);
+    ctx.drawImage( bird, bX, bY, bird.height, bird.width);
 
     bY += gravity;
 
